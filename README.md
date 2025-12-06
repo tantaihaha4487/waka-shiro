@@ -1,8 +1,6 @@
 
 # Waka-Shiro 🎏
 
-![Waka-Shiro Banner](https://images.unsplash.com/photo-1618413134375-5727555fcd48?q=80&w=1000&auto=format&fit=crop)
-
 [English](#english) | [ภาษาไทย](#thai)
 
 ---
@@ -75,33 +73,80 @@
 The project follows the Next.js App Router structure with dynamic localization.
 
 ```
-app/
-├── [lang]/                  # Dynamic Locale Route (en/th)
-│   ├── about/              # About Us Page
-│   │   ├── AboutClient.tsx
-│   │   └── page.tsx
-│   ├── admin/              # Admin Protected Routes
-│   │   ├── add-product/    # Add New Product Form
-│   │   └── dashboard/      # Admin Analytics Dashboard
-│   ├── cart/               # Shopping Cart Page
-│   ├── checkout/           # Checkout & Payment Page
-│   ├── login/              # Authentication Page
-│   ├── profile/            # User Profile & Order History
-│   ├── shop/               # Product Catalog
-│   │   ├── [id]/           # Single Product Details
-│   │   └── page.tsx        # Shop Listing
-│   ├── layout.tsx          # Locale Layout (Navbar/Footer)
-│   └── page.tsx            # Landing Page
-├── api/                    # API Routes (if any)
-├── globals.css             # Global Styles & Tailwind Directives
-└── layout.tsx              # Root Layout
+waka-shiro/
+├── app/
+│   ├── [lang]/                     # Dynamic Locale Route (en/th)
+│   │   ├── about/                  # About Us Page
+│   │   │   ├── AboutClient.tsx     # About page with Team section
+│   │   │   └── page.tsx
+│   │   ├── admin/                  # Admin Protected Routes
+│   │   │   ├── add-product/        # Add New Product Form
+│   │   │   │   ├── AddProductClient.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── dashboard/          # Admin Analytics Dashboard
+│   │   │   │   ├── DashboardClient.tsx
+│   │   │   │   └── page.tsx
+│   │   │   └── page.tsx            # Redirects to /dashboard
+│   │   ├── cart/                   # Shopping Cart Page
+│   │   │   ├── CartClient.tsx
+│   │   │   └── page.tsx
+│   │   ├── checkout/               # Checkout & Payment Page
+│   │   │   ├── CheckoutClient.tsx
+│   │   │   └── page.tsx
+│   │   ├── login/                  # Authentication Page
+│   │   │   ├── LoginClient.tsx
+│   │   │   └── page.tsx
+│   │   ├── profile/                # User Profile & Order History
+│   │   │   ├── ProfileClient.tsx
+│   │   │   └── page.tsx
+│   │   ├── shop/                   # Product Catalog
+│   │   │   ├── [id]/               # Single Product Details
+│   │   │   │   ├── ProductClient.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── ShopClient.tsx
+│   │   │   └── page.tsx            # Shop Listing
+│   │   ├── HomeClient.tsx          # Homepage Client Component
+│   │   ├── layout.tsx              # Locale Layout (Navbar/Footer)
+│   │   └── page.tsx                # Landing Page
+│   ├── favicon.ico
+│   └── globals.css                 # Global Styles & Tailwind Directives
+├── components/
+│   ├── Footer.tsx                  # Footer with Team avatars
+│   └── Navbar.tsx                  # Navigation bar
+├── context/
+│   ├── AuthContext.tsx             # Authentication state provider
+│   └── CartContext.tsx             # Shopping cart state provider
+├── lib/
+│   ├── data.ts                     # Mock data (products, users, owners)
+│   ├── dictionary.ts               # Translation loader
+│   └── dictionaries/
+│       ├── en.json                 # English translations
+│       └── th.json                 # Thai translations
+├── public/
+│   └── owner/                      # Owner profile images
+│       ├── Thanachot.png
+│       ├── Ranchida.jpg
+│       ├── Kanphitcha.JPG
+│       └── Natthaya.jpg
+├── middleware.ts                   # Locale detection & redirection
+├── tailwind.config.ts              # Tailwind + DaisyUI configuration
+└── package.json
 ```
 
 ### Core Components & Libs
-- **`components/`**: Reusable UI components like `Navbar`, `Footer`.
+- **`components/`**: Reusable UI components like `Navbar`, `Footer` (with team avatars).
 - **`context/`**: Global state providers (`AuthContext`, `CartContext`).
 - **`lib/`**:
   - `dictionary.ts`: Translation loader.
   - `dictionaries/`: JSON translation files (`en.json`, `th.json`).
-  - `data.ts`: Mock data for products and users.
+  - `data.ts`: Mock data for products, users, and **owners** (team members with Thai names).
 - **`middleware.ts`**: Handles locale detection and redirection.
+
+### Team Members (Owners)
+The project includes mock data for 4 team members displayed in the Footer and About page:
+| Name | Thai Name | Role |
+|------|-----------|------|
+| Thanachot Phomthong | ธนโชติ | Master Chef |
+| Ranchida Sarod | รัญชิดา สาโรจน์ | Tea Specialist |
+| Kanphitcha Junpun | กานต์พิชชา จันทร์พันธ์ | Pastry Chef |
+| Natthaya Patipatpakdee | ณัฐธยาน์ ปฏิพัทธ์ภักดี | Store Manager |
