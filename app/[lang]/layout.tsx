@@ -32,10 +32,10 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: 'en' | 'th' }>;
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang as 'en' | 'th');
 
   return (
     <html lang={lang} data-theme="wakashiro">
