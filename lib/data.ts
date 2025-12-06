@@ -18,6 +18,15 @@ export type User = {
     name_th?: string;
 };
 
+export type Owner = {
+    id: string;
+    name: string;
+    name_th: string;
+    role: string;
+    image: string;
+    bio: string;
+};
+
 export const products: Product[] = [
     {
         id: '1',
@@ -94,4 +103,39 @@ export const products: Product[] = [
 export const users = [
     { email: 'owner@wakashiro.com', pass: 'admin', role: 'ADMIN', name: 'Owner' },
     { email: 'user@wakashiro.com', pass: '123', role: 'CUSTOMER', name: 'Mashiro' },
+];
+
+export const owners: Owner[] = [
+    {
+        id: '1',
+        name: 'Thanachot Phomthong',
+        name_th: 'ธนโชติ ',
+        role: 'Master Chef',
+        image: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=800&auto=format&fit=crop',
+        bio: 'With over 20 years of experience in traditional Japanese confectionery.',
+    },
+    {
+        id: '2',
+        name: 'Ranchida Sarod',
+        name_th: 'รัญชิดา สาโรจน์',
+        role: 'Tea Specialist',
+        image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop',
+        bio: 'Curating the finest matcha and tea pairings for our sweets.',
+    },
+    {
+        id: '3',
+        name: 'Kanphitcha Junpun',
+        name_th: 'กานต์พิชชา จันทร์พันธ์',
+        role: 'Pastry Chef',
+        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop',
+        bio: 'Bringing a modern twist to classic recipes.',
+    },
+    {
+        id: '4',
+        name: 'Natthaya Patipatpakdee',
+        name_th: 'ณัฐธยาน์ ปฏิพัทธ์ภักดี',
+        role: 'Store Manager',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+        bio: 'Ensuring every customer feels the warmth of Japanese hospitality.',
+    },
 ];

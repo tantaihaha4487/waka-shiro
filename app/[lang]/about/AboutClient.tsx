@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Fish, ChefHat, Heart, Mail } from "lucide-react";
+import { owners } from "@/lib/data";
 
 export default function AboutClient({ lang, dict }: { lang: string, dict: any }) {
     return (
@@ -65,6 +66,45 @@ export default function AboutClient({ lang, dict }: { lang: string, dict: any })
                             className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]"
                         />
                     </motion.div>
+                </div>
+
+                {/* Team Section */}
+                <div className="mb-32">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl font-bold text-center mb-16 text-primary"
+                    >
+                        Meet the Masters
+                    </motion.h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {owners.map((owner, i) => (
+                            <motion.div
+                                key={owner.id}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1, duration: 0.5 }}
+                                className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border border-primary/10 overflow-hidden group"
+                            >
+                                <figure className="h-64 overflow-hidden relative">
+                                    <img
+                                        src={owner.image}
+                                        alt={owner.name}
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-neutral/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                        <p className="text-white text-sm">{owner.bio}</p>
+                                    </div>
+                                </figure>
+                                <div className="card-body items-center text-center p-6">
+                                    <h3 className="card-title text-lg font-bold text-neutral">{owner.name}</h3>
+                                    <p className="text-primary text-sm font-medium uppercase tracking-wider">{owner.role}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Values Section */}
