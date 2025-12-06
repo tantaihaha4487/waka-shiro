@@ -111,7 +111,7 @@ export const owners: Owner[] = [
         name: 'Thanachot Phomthong',
         name_th: 'ธนโชติ ',
         role: 'Master Chef',
-        image: 'https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=800&auto=format&fit=crop',
+        image: '/owner/Thanachot.png',
         bio: 'With over 20 years of experience in traditional Japanese confectionery.',
     },
     {
@@ -119,7 +119,7 @@ export const owners: Owner[] = [
         name: 'Ranchida Sarod',
         name_th: 'รัญชิดา สาโรจน์',
         role: 'Tea Specialist',
-        image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop',
+        image: '/owner/Ranchida.jpg',
         bio: 'Curating the finest matcha and tea pairings for our sweets.',
     },
     {
@@ -127,7 +127,7 @@ export const owners: Owner[] = [
         name: 'Kanphitcha Junpun',
         name_th: 'กานต์พิชชา จันทร์พันธ์',
         role: 'Pastry Chef',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop',
+        image: '/owner/Kanphitcha.JPG',
         bio: 'Bringing a modern twist to classic recipes.',
     },
     {
@@ -135,7 +135,7 @@ export const owners: Owner[] = [
         name: 'Natthaya Patipatpakdee',
         name_th: 'ณัฐธยาน์ ปฏิพัทธ์ภักดี',
         role: 'Store Manager',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+        image: '/owner/Natthaya.jpg',
         bio: 'Ensuring every customer feels the warmth of Japanese hospitality.',
     },
 ];
