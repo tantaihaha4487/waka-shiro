@@ -1,0 +1,104 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "back": "Back",
+        "addToCart": "Add to Cart",
+        "added": "Added!",
+        "viewDetails": "View Details",
+        "price": "Price",
+        "total": "Total",
+        "quantity": "Quantity",
+        "actions": "Actions",
+        "clearCart": "Clear Cart",
+        "checkout": "Checkout",
+        "login": "Login",
+        "logout": "Logout",
+        "profile": "Profile",
+        "dashboard": "Dashboard",
+        "guest": "Guest",
+        "continueGuest": "Continue as Guest",
+        "email": "Email",
+        "password": "Password",
+        "submit": "Submit",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "search": "Search"
+    },
+    "nav": {
+        "home": "Home",
+        "shop": "Shop",
+        "about": "About",
+        "cart": "Cart"
+    },
+    "home": {
+        "heroTitle": "Warm & Crispy Taiyaki",
+        "heroSubtitle": "Handcrafted Japanese fish-shaped cakes with premium fillings. Baked fresh daily for that perfect crunch.",
+        "orderNow": "Order Now",
+        "featuredTitle": "Featured Treats",
+        "visitUs": "Visit Us Today",
+        "visitSubtitle": "Experience the authentic taste of Japan.",
+        "ourStory": "Our Story"
+    },
+    "shop": {
+        "title": "Our Menu",
+        "filterAll": "All",
+        "filterSweet": "Sweet",
+        "filterSavory": "Savory",
+        "backToMenu": "Back to Menu"
+    },
+    "cart": {
+        "title": "Your Cart",
+        "empty": "Your Cart is Empty",
+        "emptySubtitle": "Looks like you haven't added any delicious Taiyaki yet.",
+        "startShopping": "Start Shopping",
+        "proceedCheckout": "Proceed to Checkout"
+    },
+    "checkout": {
+        "title": "Checkout",
+        "summary": "Order Summary",
+        "paymentDetails": "Payment Details",
+        "fullName": "Full Name",
+        "cardNumber": "Card Number",
+        "expiry": "Expiry",
+        "cvc": "CVC",
+        "pay": "Pay",
+        "processing": "Processing...",
+        "success": "Order placed successfully! Thank you for choosing Waka-Shiro."
+    },
+    "login": {
+        "welcome": "Welcome Back",
+        "demo": "Demo Credentials"
+    },
+    "profile": {
+        "hello": "Hello",
+        "orderHistory": "Order History",
+        "orderId": "Order ID",
+        "date": "Date",
+        "status": "Status"
+    },
+    "admin": {
+        "dashboard": "Admin Dashboard",
+        "addProduct": "Add Product",
+        "totalRevenue": "Total Revenue",
+        "totalOrders": "Total Orders",
+        "activeUsers": "Active Users",
+        "recentOrders": "Recent Orders",
+        "productName": "Product Name",
+        "category": "Category",
+        "description": "Description",
+        "imageUrl": "Image URL"
+    },
+    "about": {
+        "title": "Our Story",
+        "p1": "Welcome to Waka-Shiro, where tradition meets modern taste. Our journey began with a simple passion for Taiyaki – the iconic Japanese fish-shaped cake.",
+        "p2": "\"Waka\" represents youth and energy, while \"Shiro\" (White) symbolizes purity and our signature white tapioca flour blend that gives our Taiyaki its unique mochi-like texture.",
+        "p3": "We believe in using only the finest ingredients: locally sourced eggs, premium matcha from Uji, and organic red beans slow-cooked to perfection. Whether you crave the classic sweet fillings or our adventurous savory options, every bite is a warm embrace.",
+        "contact": "Contact Us",
+        "name": "Name",
+        "message": "Message",
+        "send": "Send Message"
+    }
+}
