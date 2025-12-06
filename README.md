@@ -72,6 +72,25 @@
 
 The project follows the Next.js App Router structure with dynamic localization.
 
+**Total Pages: 11** (accessible via `/en/*` or `/th/*`)
+
+### 🗺️ Route Map
+```
+/[lang]
+├── /                          → 🏠 Home (Landing Page)
+├── /about                     → 📖 About Us & Team
+├── /shop                      → 🛍️ Product Catalog
+│   └── /shop/[id]             → 📦 Product Details (dynamic)
+├── /cart                      → 🛒 Shopping Cart
+├── /checkout                  → 💳 Checkout & Payment
+├── /login                     → 🔐 Authentication
+├── /profile                   → 👤 User Profile & Orders
+└── /admin                     → ⚙️ Admin (redirects to dashboard)
+    ├── /admin/dashboard       → 📊 Analytics Dashboard
+    └── /admin/add-product     → ➕ Add New Product
+```
+
+### 📁 Project Structure
 ```
 waka-shiro/
 ├── app/

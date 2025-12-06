@@ -97,6 +97,36 @@ export const products: Product[] = [
         description: 'Rich and firm sponge cake, incredibly fragrant in every bite.',
         description_th: 'เนื้อแน่น หอมมมมมมมมมมมมมมกรุ่นทุกอนูของเนื้อเค้ก',
         image: 'https://i.pinimg.com/1200x/09/ea/74/09ea7422d32e8a0e0f682c6057e8d4cb.jpg',
+    },
+    {
+        id: '8',
+        name: 'Japanese Crepe',
+        name_th: 'เครป',
+        price: 5.00,
+        category: 'sweet',
+        description: 'Soft crepe filled with generous whipped cream and delicious fillings.',
+        description_th: 'แป้งนุ่ม วิปครีมก้อนโต อัดแน่นไปด้วยไส้เลิศรส',
+        image: 'https://i.pinimg.com/1200x/3c/66/90/3c6690a02da7ab49fe543a1e9a2249de.jpg',
+    },
+    {
+        id: '9',
+        name: 'Obanyaki',
+        name_th: 'โอปันยากิ',
+        price: 4.00,
+        category: 'sweet',
+        description: 'Soft fluffy cake with packed sweet filling inside.',
+        description_th: 'แป้งนุ่ม ไส้อัดแน่น หวานฉ่ำ',
+        image: 'https://www.daco-thai.com/wp-content/uploads/2021/03/frozen-imagawayaki-2.jpeg',
+    },
+    {
+        id: '10',
+        name: 'Tamagoyaki',
+        name_th: 'ไข่หวานย่างเสียบไม้',
+        price: 3.50,
+        category: 'savory',
+        description: 'Special recipe sweet egg grilled on skewers with fragrant charcoal aroma.',
+        description_th: 'ไข่หวานเนียนนุ่มสูตรพิเศษ ย่างเตาหอมกรุ่น',
+        image: 'https://img.wongnai.com/p/400x0/2020/01/20/1e4dbd41d04647b9a88de596951222fb.jpg',
     }
 ];
 
@@ -109,7 +139,7 @@ export const owners: Owner[] = [
     {
         id: '1',
         name: 'Thanachot Phomthong',
-        name_th: 'ธนโชติ ',
+        name_th: 'ธนโชติ พรมทอง',
         role: 'Master Chef',
         image: '/owner/Thanachot.png',
         bio: 'With over 20 years of experience in traditional Japanese confectionery.',
