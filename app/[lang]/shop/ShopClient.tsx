@@ -69,8 +69,8 @@ export default function ShopClient({ lang, dict }: { lang: string, dict: any }) 
                                         </div>
                                     </figure>
                                     <div className="card-body">
-                                        <h2 className="card-title text-2xl font-bold text-neutral">{product.name}</h2>
-                                        <p className="text-neutral/70 text-sm line-clamp-2">{product.description}</p>
+                                        <h2 className="card-title text-2xl font-bold text-neutral">{lang === 'th' ? product.name_th : product.name}</h2>
+                                        <p className="text-neutral/70 text-sm line-clamp-2">{lang === 'th' ? product.description_th : product.description}</p>
                                         <div className="card-actions justify-end mt-6">
                                             <button className="btn btn-primary btn-sm text-white px-6 shadow-md group-hover:shadow-lg transition-all">
                                                 {dict.common.viewDetails}

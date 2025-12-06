@@ -57,12 +57,12 @@ export default function ProductDetailClient({ lang, dict, id }: { lang: string, 
                 >
                     <div>
                         <div className="badge badge-secondary text-white uppercase font-bold tracking-wider mb-4 p-3">{product.category}</div>
-                        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-2">{product.name}</h1>
+                        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-2">{lang === 'th' ? product.name_th : product.name}</h1>
                         <p className="text-3xl font-semibold text-neutral/80">${product.price.toFixed(2)}</p>
                     </div>
 
                     <p className="text-xl text-neutral/70 leading-relaxed font-light">
-                        {product.description}
+                        {lang === 'th' ? product.description_th : product.description}
                     </p>
 
                     <div className="pt-6">

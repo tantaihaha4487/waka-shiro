@@ -14,7 +14,7 @@ export default function HomeClient({ lang, dict }: { lang: string, dict: any }) 
       <section className="hero min-h-[85vh] relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1618413134375-5727555fcd48?q=80&w=2000&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1602030029545-52959ef2927c?q=80&w=2000&auto=format&fit=crop"
             className="w-full h-full object-cover opacity-90"
             alt="Hero Background"
           />
@@ -82,8 +82,8 @@ export default function HomeClient({ lang, dict }: { lang: string, dict: any }) 
                 <div className="absolute inset-0 bg-neutral/0 group-hover:bg-neutral/10 transition-colors duration-300" />
               </figure>
               <div className="card-body items-center text-center">
-                <h2 className="card-title text-2xl font-bold text-neutral">{product.name}</h2>
-                <p className="text-neutral/70 line-clamp-2">{product.description}</p>
+                <h2 className="card-title text-2xl font-bold text-neutral">{lang === 'th' ? product.name_th : product.name}</h2>
+                <p className="text-neutral/70 line-clamp-2">{lang === 'th' ? product.description_th : product.description}</p>
                 <div className="card-actions mt-6">
                   <Link href={`/${lang}/shop/${product.id}`} className="btn btn-primary text-white px-8">
                     {dict.common.viewDetails}

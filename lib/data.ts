@@ -2,9 +2,11 @@
 export type Product = {
     id: string;
     name: string;
+    name_th: string;
     price: number;
     category: 'sweet' | 'savory';
     description: string;
+    description_th: string;
     image: string;
 };
 
@@ -13,57 +15,80 @@ export type User = {
     email: string;
     role: 'ADMIN' | 'CUSTOMER' | 'GUEST';
     name?: string;
+    name_th?: string;
 };
 
 export const products: Product[] = [
     {
         id: '1',
-        name: 'Classic Red Bean',
-        price: 3.50,
+        name: 'Signature Taiyaki',
+        name_th: 'ไทยากิ',
+        price: 4.00,
         category: 'sweet',
-        description: 'Traditional sweet red bean paste filling in a crispy waffle shell.',
-        image: 'https://images.unsplash.com/photo-1599629968754-3ef9d52b7526?q=80&w=800&auto=format&fit=crop',
+        description: 'Classic fish-shaped cake with a crispy exterior and soft, fluffy interior.',
+        description_th: 'ขนมรูปปลาในตำนาน กรอบนอกนุ่มใน หอมอร่อย',
+        image: 'https://i.pinimg.com/736x/76/96/ce/7696ce58bdb8c9efa13de4eb068e667b.jpg',
     },
     {
         id: '2',
-        name: 'Custard Waka',
-        price: 3.75,
+        name: 'Traditional Mochi',
+        name_th: 'โมจิ',
+        price: 4.50,
         category: 'sweet',
-        description: 'Rich and creamy vanilla custard filling.',
-        image: 'https://images.unsplash.com/photo-1618413134375-5727555fcd48?q=80&w=800&auto=format&fit=crop',
+        description: 'Special original recipe. Round, soft, and chewy mochi with a fragrant charcoal aroma.',
+        description_th: 'สูตรพิเศษจากต้นตำรับ โมจิก้อนกลม เหนียว นุ่ม หนึบ หอมกรุ่นกลิ่นเตาถ่าน',
+        image: 'https://i.pinimg.com/736x/57/bf/79/57bf793a72265c530ee97e71c38bbc06.jpg',
     },
     {
         id: '3',
-        name: 'Matcha Shiro',
-        price: 4.00,
+        name: 'Strawberry Daifuku',
+        name_th: 'ไดฟูกุ',
+        price: 5.00,
         category: 'sweet',
-        description: 'Premium matcha cream with white chocolate bits.',
-        image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=800&auto=format&fit=crop',
+        description: 'Soft and chewy round rice cake filled with generous red bean paste and a juicy strawberry.',
+        description_th: 'ต้าวก้อนกลมๆ เหนียวนุ่ม ถั่วแดงเต็มคำ สตอว์เบอร์รีฉ่ำ ๆ',
+        image: 'https://i.pinimg.com/736x/aa/cc/8b/aacc8b5a241a406d35353c9166cd9eaf.jpg',
     },
     {
         id: '4',
-        name: 'Chocolate Bliss',
-        price: 3.75,
+        name: 'Red Bean Dorayaki',
+        name_th: 'โดรายากิ',
+        price: 4.00,
         category: 'sweet',
-        description: 'Decadent dark chocolate filling.',
-        image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476d?q=80&w=800&auto=format&fit=crop',
+        description: 'Fluffy, fragrant pancakes sandwiching a generous filling of sweet red bean paste.',
+        description_th: 'แป้งหอมนุ่ม ไส้ถั่วแดงแน่นเต็มคำ',
+        image: 'https://i.pinimg.com/1200x/d4/2d/9f/d42d9fa4cce8285442ba47474dbf2d88.jpg',
     },
     {
         id: '5',
-        name: 'Ham & Cheese',
-        price: 4.50,
-        category: 'savory',
-        description: 'Savory ham and melted cheddar cheese.',
-        image: 'https://images.unsplash.com/photo-1626202158864-1d3745672a42?q=80&w=800&auto=format&fit=crop',
+        name: 'Mitarashi Dango',
+        name_th: 'ดังโงะ',
+        price: 3.50,
+        category: 'sweet',
+        description: 'Fragrant, soft, and chewy rice dumplings glazed with our special sweet soy sauce.',
+        description_th: 'หอมกรุ่น นุ่มหนึบหนึบ ราดด้วยซอสสุดพิเศษ',
+        image: 'https://i.pinimg.com/1200x/5c/95/48/5c9548213487cbe879c681816850714f.jpg',
     },
     {
         id: '6',
-        name: 'Tuna Mayo',
-        price: 4.50,
+        name: 'Charcoal Grilled Senbei',
+        name_th: 'เซมเบ้',
+        price: 3.00,
         category: 'savory',
-        description: 'Japanese style tuna mayonnaise filling.',
-        image: 'https://images.unsplash.com/photo-1534483509719-3feaee7c30da?q=80&w=800&auto=format&fit=crop',
+        description: 'Crispy traditional rice crackers with an authentic charcoal-grilled aroma.',
+        description_th: 'ข้าวเกรียบกรุบกรอบ หอมกลิ่นเตาถ่านแบบต้นตำรับ',
+        image: 'https://chillchilljapan.com/wp-content/uploads/2021/08/pixta_77312295_M.jpg.webp',
     },
+    {
+        id: '7',
+        name: 'Nagasaki Castella',
+        name_th: 'นางาซากิคาสุเทะระ',
+        price: 5.50,
+        category: 'sweet',
+        description: 'Rich and firm sponge cake, incredibly fragrant in every bite.',
+        description_th: 'เนื้อแน่น หอมมมมมมมมมมมมมมกรุ่นทุกอนูของเนื้อเค้ก',
+        image: 'https://i.pinimg.com/1200x/09/ea/74/09ea7422d32e8a0e0f682c6057e8d4cb.jpg',
+    }
 ];
 
 export const users = [

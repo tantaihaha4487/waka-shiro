@@ -61,7 +61,7 @@ export default function CheckoutClient({ lang, dict }: { lang: string, dict: any
                                                 <img src={item.image} alt={item.name} />
                                             </div>
                                         </div>
-                                        <span className="font-medium">{item.name} <span className="text-xs opacity-50">x{item.quantity}</span></span>
+                                        <span className="font-medium">{lang === 'th' ? item.name_th : item.name} <span className="text-xs opacity-50">x{item.quantity}</span></span>
                                     </div>
                                     <span className="font-bold">${(item.price * item.quantity).toFixed(2)}</span>
                                 </li>

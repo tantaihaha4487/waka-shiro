@@ -2,8 +2,20 @@
 @plugin "daisyui";
 
 @theme {
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-kanit);
   --font-mono: var(--font-geist-mono);
+}
+
+@layer utilities {
+  .kanit-extralight {
+    font-family: var(--font-kanit);
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .font-kanit {
+    font-family: var(--font-kanit);
+  }
 }
 
 @layer components {
@@ -11,7 +23,7 @@
   .input,
   .textarea,
   .select {
-    @apply bg-base-100/50 backdrop-blur-md border-primary/20 shadow-sm transition-all duration-300 rounded-xl text-neutral placeholder:text-neutral/50;
+    @apply bg-base-100/50 backdrop-blur-md border-primary/20 shadow-sm transition-all duration-300 rounded-xl text-neutral placeholder:text-neutral/50 font-sans;
   }
 
   .input:focus,
@@ -22,6 +34,11 @@
 
   /* Card Glass Effect */
   .card {
-    @apply bg-base-100/80 backdrop-blur-sm border border-primary/10 shadow-xl text-neutral;
+    @apply bg-base-100/80 backdrop-blur-sm border border-primary/10 shadow-xl text-neutral font-sans;
   }
+}
+
+/* Force body font */
+body {
+  font-family: var(--font-kanit), sans-serif;
 }

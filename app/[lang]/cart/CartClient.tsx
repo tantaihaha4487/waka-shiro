@@ -74,7 +74,7 @@ export default function CartClient({ lang, dict }: { lang: string, dict: any }) 
                                                 </div>
                                             </div>
                                             <div>
-                                                <div className="font-bold text-lg">{item.name}</div>
+                                                <div className="font-bold text-lg">{lang === 'th' ? item.name_th : item.name}</div>
                                                 <div className="text-sm opacity-60 capitalize badge badge-ghost badge-sm">{item.category}</div>
                                             </div>
                                         </div>

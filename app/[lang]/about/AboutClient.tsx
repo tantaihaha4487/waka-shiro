@@ -60,7 +60,7 @@ export default function AboutClient({ lang, dict }: { lang: string, dict: any })
                     >
                         <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-xl" />
                         <img
-                            src="https://images.unsplash.com/photo-1626202158864-1d3745672a42?q=80&w=800&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1761064864527-1306bf9b5b45?q=80&w=800&auto=format&fit=crop"
                             alt="Taiyaki Making"
                             className="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]"
                         />
