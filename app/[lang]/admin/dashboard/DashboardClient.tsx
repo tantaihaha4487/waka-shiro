@@ -35,7 +35,7 @@ export default function DashboardClient({ lang, dict }: { lang: string, dict: an
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 {[
-                    { icon: DollarSign, title: dict.admin.totalRevenue, value: '$25,600', desc: '21% more than last month', color: 'text-primary', trend: 'up' },
+                    { icon: DollarSign, title: dict.admin.totalRevenue, value: '฿5,600', desc: '21% more than last month', color: 'text-primary', trend: 'up' },
                     { icon: ShoppingBag, title: dict.admin.totalOrders, value: '1,200', desc: '50 new orders today', color: 'text-secondary', trend: 'up' },
                     { icon: Users, title: dict.admin.activeUsers, value: '4,200', desc: '400 (22%)', color: 'text-accent', trend: 'up' }
                 ].map((stat, i) => (
@@ -82,9 +82,9 @@ export default function DashboardClient({ lang, dict }: { lang: string, dict: an
                             </thead>
                             <tbody>
                                 {[
-                                    { id: '#ORD-123', customer: 'Mashiro', items: 'Classic Red Bean x 2', total: '$7.00', status: 'Pending', badge: 'badge-warning' },
-                                    { id: '#ORD-124', customer: 'John Doe', items: 'Custard Waka x 5', total: '$18.75', status: 'Completed', badge: 'badge-success text-white' },
-                                    { id: '#ORD-125', customer: 'Jane Smith', items: 'Matcha Shiro x 1', total: '$4.00', status: 'Cancelled', badge: 'badge-error text-white' }
+                                    { id: '#ORD-123', customer: 'Mashiro', items: 'Classic Red Bean x 2', total: '฿.00', status: 'Pending', badge: 'badge-warning' },
+                                    { id: '#ORD-124', customer: 'John Doe', items: 'Custard Waka x 5', total: '฿8.75', status: 'Completed', badge: 'badge-success text-white' },
+                                    { id: '#ORD-125', customer: 'Jane Smith', items: 'Matcha Shiro x 1', total: '฿.00', status: 'Cancelled', badge: 'badge-error text-white' }
                                 ].map((order, i) => (
                                     <motion.tr
                                         key={order.id}

@@ -58,7 +58,7 @@ export default function ProductDetailClient({ lang, dict, id }: { lang: string, 
                     <div>
                         <div className="badge badge-secondary text-white uppercase font-bold tracking-wider mb-4 p-3">{product.category}</div>
                         <h1 className="text-5xl md:text-6xl font-bold text-primary mb-2">{lang === 'th' ? product.name_th : product.name}</h1>
-                        <p className="text-3xl font-semibold text-neutral/80">${product.price.toFixed(2)}</p>
+                        <p className="text-3xl font-semibold text-neutral/80">฿{product.price.toFixed(2)}</p>
                     </div>
 
                     <p className="text-xl text-neutral/70 leading-relaxed font-light">
@@ -69,7 +69,7 @@ export default function ProductDetailClient({ lang, dict, id }: { lang: string, 
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className={`btn btn-lg w-full md:w-auto px-12 shadow-xl ${added ? 'btn-success text-white' : 'btn-primary text-white'}`}
+                            className={`btn btn-lg w-full md:w-auto px-12 shadow-xl ฿{added ? 'btn-success text-white' : 'btn-primary text-white'}`}
                             onClick={handleAddToCart}
                         >
                             <ShoppingBag className="w-5 h-5 mr-2" />
