@@ -65,7 +65,7 @@ export default function ShopClient({ lang, dict }: { lang: string, dict: any }) 
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
                                         <div className="absolute top-4 right-4">
-                                            <span className="badge badge-secondary text-white font-bold shadow-md">${product.price.toFixed(2)}</span>
+                                            <span className="badge badge-secondary text-white font-bold shadow-md">฿{product.price.toFixed(2)}</span>
                                         </div>
                                     </figure>
                                     <div className="card-body">

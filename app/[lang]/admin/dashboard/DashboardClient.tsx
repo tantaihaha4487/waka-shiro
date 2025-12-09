@@ -82,9 +82,9 @@ export default function DashboardClient({ lang, dict }: { lang: string, dict: an
                             </thead>
                             <tbody>
                                 {[
-                                    { id: '#ORD-123', customer: 'Mashiro', items: 'Classic Red Bean x 2', total: '฿.00', status: 'Pending', badge: 'badge-warning' },
-                                    { id: '#ORD-124', customer: 'John Doe', items: 'Custard Waka x 5', total: '฿8.75', status: 'Completed', badge: 'badge-success text-white' },
-                                    { id: '#ORD-125', customer: 'Jane Smith', items: 'Matcha Shiro x 1', total: '฿.00', status: 'Cancelled', badge: 'badge-error text-white' }
+                                    { id: '#ORD-123', customer: 'Mashiro', items: 'Signature Taiyaki x 1', total: '฿50.00', status: 'Pending', badge: 'badge-warning' },
+                                    { id: '#ORD-124', customer: 'Thanachot P.', items: 'Mitarashi Dango x 2', total: '฿218.00', status: 'Completed', badge: 'badge-success text-white' },
+                                    { id: '#ORD-125', customer: 'Jane Smith', items: 'Japanese Crepe x 1', total: '฿65.00', status: 'Cancelled', badge: 'badge-error text-white' }
                                 ].map((order, i) => (
                                     <motion.tr
                                         key={order.id}
