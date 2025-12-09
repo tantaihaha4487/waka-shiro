@@ -63,14 +63,14 @@ export default function CheckoutClient({ lang, dict }: { lang: string, dict: any
                                         </div>
                                         <span className="font-medium">{lang === 'th' ? item.name_th : item.name} <span className="text-xs opacity-50">x{item.quantity}</span></span>
                                     </div>
-                                    <span className="font-bold">${(item.price * item.quantity).toFixed(2)}</span>
+                                    <span className="font-bold">฿{(item.price * item.quantity).toFixed(2)}</span>
                                 </li>
                             ))}
                         </ul>
                         <div className="divider"></div>
                         <div className="flex justify-between text-2xl font-bold text-primary">
                             <span>{dict.common.total}</span>
-                            <span>${total.toFixed(2)}</span>
+                            <span>฿{total.toFixed(2)}</span>
                         </div>
                     </div>
                 </motion.div>
@@ -127,7 +127,7 @@ export default function CheckoutClient({ lang, dict }: { lang: string, dict: any
                                 >
                                     {loading ? dict.checkout.processing : (
                                         <span className="flex items-center gap-2">
-                                            {dict.checkout.pay} ${total.toFixed(2)} <CheckCircle className="w-5 h-5" />
+                                            {dict.checkout.pay} ฿{total.toFixed(2)} <CheckCircle className="w-5 h-5" />
                                         </span>
                                     )}
                                 </motion.button>

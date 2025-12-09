@@ -79,13 +79,13 @@ export default function CartClient({ lang, dict }: { lang: string, dict: any }) 
                                             </div>
                                         </div>
                                     </td>
-                                    <td className="font-medium">${item.price.toFixed(2)}</td>
+                                    <td className="font-medium">฿{item.price.toFixed(2)}</td>
                                     <td>
                                         <div className="flex items-center gap-2">
                                             <span className="font-mono bg-base-200 px-3 py-1 rounded-lg">{item.quantity}</span>
                                         </div>
                                     </td>
-                                    <td className="font-bold text-primary">${(item.price * item.quantity).toFixed(2)}</td>
+                                    <td className="font-bold text-primary">฿{(item.price * item.quantity).toFixed(2)}</td>
                                     <td>
                                         <button
                                             onClick={() => removeItem(item.id)}
@@ -113,7 +113,7 @@ export default function CartClient({ lang, dict }: { lang: string, dict: any }) 
                 <div className="flex flex-col md:flex-row items-center gap-6">
                     <div className="text-3xl font-bold text-primary">
                         <span className="text-base font-normal text-neutral/50 mr-2">{dict.common.total}:</span>
-                        ${total.toFixed(2)}
+                        ฿{total.toFixed(2)}
                     </div>
                     <Link href={`/${lang}/checkout`} className="btn btn-primary btn-lg text-white shadow-lg hover:shadow-primary/50 hover:scale-105 transition-all">
                         {dict.cart.proceedCheckout} <ArrowRight className="w-5 h-5 ml-2" />

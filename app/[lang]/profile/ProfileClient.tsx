@@ -64,8 +64,8 @@ export default function ProfileClient({ lang, dict }: { lang: string, dict: any 
                             <tbody>
                                 {/* Mock Data */}
                                 {[
-                                    { id: '#ORD-001', date: '2023-10-25', status: 'Delivered', total: '฿2.50' },
-                                    { id: '#ORD-002', date: '2023-11-02', status: 'Delivered', total: '฿.75' }
+                                    { id: '#ORD-001', date: '2023-10-25', status: 'Delivered', total: '฿218.00' },
+                                    { id: '#ORD-002', date: '2023-11-02', status: 'Delivered', total: '฿65.00' }
                                 ].map((order, i) => (
                                     <motion.tr
                                         key={order.id}
