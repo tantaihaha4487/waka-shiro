@@ -1,24 +1,34 @@
 
 "use client";
 
-import { useState } from 'react';
-import { products } from '@/lib/data';
+import { useState, useEffect } from 'react';
 import { useCart } from '@/context/CartContext';
-import { notFound } from 'next/navigation';
 import { ArrowLeft, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function ProductDetailClient({ lang, dict, id }: { lang: string, dict: any, id: string }) {
-    const product = products.find(p => p.id === id);
     const { addItem } = useCart();
     const [added, setAdded] = useState(false);
+    const [product, setProduct] = useState<any | null>(null);
+    const [loading, setLoading] = useState(true);
 
-    if (!product) {
-        notFound();
-    }
+    useEffect(() => {
+        let cancelled = false;
+        setLoading(true);
+        fetch(`/api/products/${id}`)
+            .then(r => {
+                if (!r.ok) throw new Error('Not found');
+                return r.json();
+            })
+            .then((p) => { if (!cancelled) setProduct(p) })
+            .catch(() => { if (!cancelled) setProduct(null) })
+            .finally(() => !cancelled && setLoading(false));
+        return () => { cancelled = true };
+    }, [id]);
 
     const handleAddToCart = () => {
+        if (!product) return;
         addItem(product);
         setAdded(true);
         setTimeout(() => setAdded(false), 2000);
@@ -36,18 +46,25 @@ export default function ProductDetailClient({ lang, dict, id }: { lang: string, 
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <motion.div
+                    {loading ? (
+                        <div className="text-center py-10">{dict.common.loading}</div>
+                    ) : !product ? (
+                        <div className="text-center py-10">{dict.shop.productNotFound || 'Product not found'}</div>
+                    ) : (
+                    <motion.div
                     initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
                     transition={{ duration: 0.6 }}
                     className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20"
                 >
-                    <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    />
+                        <img
+                            src={product.image}
+                            alt={lang === 'th' ? product.name_th : product.name}
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        />
                 </motion.div>
+
+                    )}
 
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
@@ -56,13 +73,13 @@ export default function ProductDetailClient({ lang, dict, id }: { lang: string, 
                     className="space-y-8"
                 >
                     <div>
-                        <div className="badge badge-secondary text-white uppercase font-bold tracking-wider mb-4 p-3">{product.category}</div>
-                        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-2">{lang === 'th' ? product.name_th : product.name}</h1>
-                        <p className="text-3xl font-semibold text-neutral/80">฿{product.price.toFixed(2)}</p>
+                        <div className="badge badge-secondary text-white uppercase font-bold tracking-wider mb-4 p-3">{product?.category}</div>
+                        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-2">{lang === 'th' ? product?.name_th : product?.name}</h1>
+                        <p className="text-3xl font-semibold text-neutral/80">฿{product?.price?.toFixed?.(2)}</p>
                     </div>
 
                     <p className="text-xl text-neutral/70 leading-relaxed font-light">
-                        {lang === 'th' ? product.description_th : product.description}
+                        {lang === 'th' ? product?.description_th : product?.description}
                     </p>
 
                     <div className="pt-6">
